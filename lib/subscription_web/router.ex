@@ -64,6 +64,7 @@ defmodule SubscriptionWeb.Router do
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+    resources "/posts", PostController
   end
 
   scope "/", SubscriptionWeb do
