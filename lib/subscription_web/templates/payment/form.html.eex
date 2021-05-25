@@ -1,0 +1,11 @@
+<%= form_for @changeset, @action, fn f -> %>
+<input type="hidden" name="amount" value="200">
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%=System.get_env("STRIPE_PUBLIC_KEY")%>"
+          data-amount="200"
+          data-email=""
+          data-allow-remember-me="false"
+          data-billing-address="true"
+          data-zip-code="true"
+          data-locale="auto"></script>
+<% end %>

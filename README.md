@@ -17,9 +17,22 @@ The default is 'guest' after signup. 'Admin' is assigned through the DB and 'adm
 mix phx.gen.html Blog Post posts title:string body:string
 ~~~~~~~
 
+### Payment Setup
+
+We wrote functions "SingleProduct.Payment.subscribe" and "SingleProduct.Payment.unsubscribe" to toggle the roles between "guest" and "customer" based on Stripe payments. These functions are invoked by the Payment controller that interacts with Stripe.
+
+Additionally, we created authorization logic so that the customer, after payment, goes back to the link he intended to see (Still needs to be done).
+
+### Authorization Setup
+
+The function "authorize" contains various permissions for "admin", "guest" and "customer".
+
+
+### Authorized webhook for Renewal
+
+
 
 ## Common Instructions
-
 
 To start your Phoenix server:
 

@@ -6,6 +6,7 @@ defmodule Subscription.Accounts.User do
   schema "users" do
     field :email, :string
     field :password, :string, virtual: true
+    field :role, :string
     field :hashed_password, :string
     field :confirmed_at, :naive_datetime
 
