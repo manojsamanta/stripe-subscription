@@ -1,5 +1,6 @@
-<%= form_for @changeset, @action, fn f -> %>
+<%= form_for @conn, @action, fn f -> %>
 <input type="hidden" name="amount" value="200">
+<input type="hidden" name="page" value="<%= @params["id"] %>">
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%=System.get_env("STRIPE_PUBLIC_KEY")%>"
           data-amount="200"

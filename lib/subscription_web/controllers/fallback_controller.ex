@@ -17,7 +17,7 @@ defmodule SubscriptionWeb.FallbackController do
   end
 
   def call(conn, {:route, post}) do
-    redirect(conn, to: Routes.payment_path(conn, :new))
+    redirect(conn, to: Routes.payment_path(conn, :new, %{id: post.id}))
   end
 
   def call(conn, {:error, _}) do
