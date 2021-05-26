@@ -1,4 +1,4 @@
-defmodule Subscription.Repo.Migrations.CreatePosts do
+defmodule Subscription.Repo.Migrations.CreateBlog do
   use Ecto.Migration
 
   def change do
